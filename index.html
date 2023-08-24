@@ -63,40 +63,37 @@
     <code>npx prettier src/main.jsx --write</code>
 
     <p><strong>7. Crear archivos de configuración:</strong></p>
-
+    
     <p>Crear archivo <code>.eslintrc.js</code>:</p>
     <pre><code>module.exports = {
-  extends: ['airbnb', 'prettier', 'prettier/react'],
-  rules: {
-    // Agregar reglas específicas si es necesario
-  },
-};</code></pre>
+      extends: ['airbnb', 'prettier', 'prettier/react'],
+      rules: {
+        // Agregar reglas específicas si es necesario
+      },
+    };</code></pre>
     <p>Crear archivo <code>.prettierrc.js</code>:</p>
     <pre><code>module.exports = {
-  singleQuote: true,
-  trailingComma: 'es5',
-};</code></pre>
-
+      singleQuote: true,
+      trailingComma: 'es5',
+    };</code></pre>
+    
+    <p><strong>8. Instalar "npm i -D eslint-config-prettier":</strong></p>
+    <p>Este paquete permite que las reglas de ESLint y Prettier trabajen juntas sin conflictos al desactivar las reglas de ESLint que podrían chocar con las de Prettier. Al hacerlo, se logra un código formateado de manera coherente y se mantienen las convenciones de calidad de código en el proyecto.</p>
     <p>
       <strong
-        >8. Configurar scripts en el archivo <code>package.json</code>:</strong
+        >. Configurar scripts en el archivo <code>package.json</code>:</strong
       >
     </p>
 
     <pre><code>"scripts": {
-  "lint": "eslint .",
-  "lint:fix": "eslint . --fix",
+  "lint": "eslint --fix . ext .js,.jsx",
   "format": "prettier --write ."
 }</code></pre>
 
     <h3>Uso de los comandos</h3>
     <ul>
       <li>
-        <code>npm run lint</code>: Verifica y muestra problemas de estilo
-        utilizando ESLint.
-      </li>
-      <li>
-        <code>npm run lint:fix</code>: Intenta corregir automáticamente
+        <code>npm run lint</code>: Intenta corregir automáticamente
         problemas de estilo utilizando ESLint.
       </li>
       <li>
@@ -110,9 +107,9 @@
       React.js.
     </p>
 
-    <h3>Integración con tu editor de código</h3>
+    <h3>Recomendaciones para una mejor integración con tu editor de código</h3>
     <p>
-      Para una experiencia más fluida, integra ESLint y Prettier con tu editor
+      Para una experiencia más fluida, integra las extenciones de ESLint y Prettier con tu editor
       de código.
     </p>
   </body>
